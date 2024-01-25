@@ -3,8 +3,8 @@ import tkinter.font as tkFont
 import socket
 
 # Wifi
-UDP_IP = "000.000.0.000" # Indicar IP
-UDP_PORT = 0000 # Indicar puerto
+UDP_IP = "10.10.54.129" # Indicar IP
+UDP_PORT = 8888 # Indicar puerto
 sock = socket.socket(socket.AF_INET, # Internet
                 socket.SOCK_DGRAM) # UDP
 
@@ -173,6 +173,7 @@ class App:
 
     def r_turn_button_command(self):
         print("Right turn")
+        self.send_message('r')
 
     def send_message(self, message):
         mes = bytes(message, 'ascii')
